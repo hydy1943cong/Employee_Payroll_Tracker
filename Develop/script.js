@@ -13,6 +13,9 @@ const collectEmployees = function() {
     let firstNameInput= prompt ("Please enter the first name of the employee.");
     let lastNameInput = prompt("Please enter the last name of the employee.");
     let salaryInput = prompt ("Please enter the salary of the employee.");
+    if (isNaN(salaryInput)) {
+      alert ('Please enter a number!');
+    } else {
     // add a object called employee
     const employeeInput = {
       firstName: firstNameInput,
@@ -21,6 +24,7 @@ const collectEmployees = function() {
     };
     employeesArray.push(employeeInput);
     addAnotherQuestion(); 
+  }
   }
   return(employeesArray);
 }
