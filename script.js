@@ -14,9 +14,8 @@ const collectEmployees = function() {
     let lastNameInput = prompt("Please enter the last name of the employee.");
     let salaryInput = prompt ("Please enter the salary of the employee.");
     if (isNaN(salaryInput)) {
-      alert ('Please enter a number!');
-    } else {
-    // add a object called employee
+      salaryInput=0;
+    } 
     const employeeInput = {
       firstName: firstNameInput,
       lastName: lastNameInput,
@@ -24,11 +23,9 @@ const collectEmployees = function() {
     };
     employeesArray.push(employeeInput);
     addAnotherQuestion(); 
-  }
-  }
-  return(employeesArray);
 }
-
+return(employeesArray);
+}
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
   // TODO: Calculate and display the average salary
